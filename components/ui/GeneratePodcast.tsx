@@ -12,7 +12,21 @@ const useGeneratePodcast = ({
     const [isGenerating, setIsGenerating] = useState(false);
 
 
-    const generatePodcast = async () => {}
+    const generatePodcast = async () => {
+      setIsGenerating(true);
+      setAudio('');
+
+      if(!voicePrompt) {
+        return setIsGenerating(false);
+      }
+
+      try {
+        //const response = await getPodcastAudio({})
+      } catch (error) {
+        console.log('Error generating podcast', error)
+        setIsGenerating(false);
+      }
+    }
 
     return { isGenerating, generatePodcast }
 }
