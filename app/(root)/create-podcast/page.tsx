@@ -26,8 +26,8 @@ import {
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea"
-import GeneratePodcast from "@/components/ui/GeneratePodcast";
-import GenerateThumbnail from "@/components/ui/GenerateThumbnail";
+import GeneratePodcast from "@/components/GeneratePodcast";
+import GenerateThumbnail from "@/components/GenerateThumbnail";
 import { Loader } from "lucide-react";
 import { Id } from "@/convex/_generated/dataModel";
 
@@ -145,7 +145,13 @@ const CreatePodcast = () => {
               setAudioDuration={setAudioDuration}
             />
 
-            <GenerateThumbnail />
+            <GenerateThumbnail 
+              setImage={setImageUrl}
+              setImageStorageId={setImageStorageId}
+              image={imageUrl}
+              imagePrompt={imagePrompt}
+              setImagePrompt={setImagePrompt}
+            />
 
             
             <div>
