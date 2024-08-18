@@ -9,7 +9,11 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 'wonderful-avocet-164.convex.cloud'
-            }
+            },
+            {
+                protocol: 'https',
+                hostname: 'img.clerk.com'
+            },
         ]
     }
 };
