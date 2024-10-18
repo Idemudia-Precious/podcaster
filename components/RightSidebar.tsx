@@ -18,6 +18,8 @@ const RightSidebar = () => {
   const topPodcasters = useQuery(api.users.getTopUserByPodcastCount);
   const router = useRouter();
 
+  if(!topPodcasters) return <LoaderSpinner />
+
   //const { audio } = useAudio();
   //<section className={cn('right_sidebar h-[calc(100vh-5px)]', {
     //  'h-[calc(100vh-140px)]': audio?.audioUrl
@@ -47,7 +49,7 @@ const RightSidebar = () => {
       <section className="flex flex-col gap-8 pt-12">
         <Header headerTitle="Top Podcastrs" />
         <div className="flex flex-col gap-6">
-          {topPodcasters?.slice(0, 3).map((podcaster) => (
+          {topPodcasters?.slice(0,4).map((podcaster) => (
             <div key={podcaster._id} className="flex cursor-pointer justify-between" onClick={() => router.push(`/profile/${podcaster.clerkId}`)}>
               <figure className="flex items-center gap-2">
                 <Image
