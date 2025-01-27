@@ -2,7 +2,7 @@
 
 import EmptyState from '@/components/EmptyState'
 import LoaderSpinner from '@/components/LoaderSpinner'
-import PodcastCard from '@/components/PodcastCard'
+import PodcastCard from '@/components/PodcastCard' 
 import PodcastDetailPlayer from '@/components/PodcastDetailPlayer'
 import { api } from '@/convex/_generated/api'
 import { Id } from '@/convex/_generated/dataModel'
